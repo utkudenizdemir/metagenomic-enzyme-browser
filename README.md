@@ -84,14 +84,13 @@ http://localhost:3000
 
 ---
 
-## Example Data
+## Example Dataset
 
-A small subset of metagenomic annotation data is included for demonstration purposes:
+A small subset of the original metagenomic annotation database is included in the backend directory for development and testing purposes:
 
-* `data/example_subset.tsv` → input dataset
-* `data/example_filtered_output.tsv` → filtered output
+- `backend/subset_300.tsv` → representative subset used for filtering, table preparation, and database integration
 
-This allows testing of the filtering workflow without requiring large datasets.
+This subset was used to prototype and validate the enzyme annotation workflow without requiring the full database.
 
 ---
 
