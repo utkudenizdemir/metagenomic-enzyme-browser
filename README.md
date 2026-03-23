@@ -47,7 +47,7 @@ metagenomic-enzyme-browser/
 ### 1. Clone the repository
 
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/utkudenizdemir/metagenomic-enzyme-browser.git
 cd metagenomic-enzyme-browser
 ```
 
