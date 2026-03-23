@@ -1,0 +1,62 @@
+Assembly:
+- GC_content: 50.3
+  N50: 75000
+  assembler_tool: SPAdes
+  assembly_version: 3.15.2
+  contig_count: 500
+  largest_contig: 150000
+  sample_id: SAMP001
+  total_assembled_length: 300000000
+Biome:
+- biome_id: 1
+  biome_name: Ocean
+  environment_ontology: ENVO:00000016
+  other_factors: 'Salinity: 35 PSU'
+  ph: 8.1
+  temperature: 15.5
+DNAPrep:
+- concentration: 50.2
+  kit_used: DNA Extraction Kit X
+  prep_date: '2024-02-11'
+  sample_id: SAMP001
+  technician: Dr. John Smith
+  user_identifier: Sample1_Prep
+Geolocation:
+- additional_info: Nearshore sampling site.
+  altitude: 0
+  country: USA
+  latitude: 25
+  longitude: -89.5
+  region: Gulf Coast
+  sample_id: SAMP001
+OverallStats:
+- total_bp: 1000000000
+  total_cds: 125000000
+  total_samples: 90
+  total_studies: 10
+Sample:
+- biome_id: 1
+  collection_date: '2024-02-10'
+  description: Sample collected as part of oceanographic survey.
+  environment: Marine water sample collected from 10m depth.
+  location: Gulf of Mexico
+  sample_id: SAMP001
+  short_sample_name: M2_01
+  study_id: PRJEB12345
+SequencingRun:
+- number_of_reads: 20000000
+  prep_id: PREP001
+  quality_score_avg: 35.6
+  read_length: 150
+  sequencing_method: Paired-end sequencing
+  sequencing_platform: Illumina
+  total_base_pairs: 3000000000
+Study:
+- description: Study on the microbial diversity in various marine environments around
+    the globe.
+  publication_link: http://example.com/publication
+  short_study_name: M2
+  study_id: PRJEB12345
+  submission_date: '2024-01-15'
+  submitter_name: Dr. Jane Doe
+  title: Microbiome Diversity in Marine Environments

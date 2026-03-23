@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Protein Detail</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+        }
+        .section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 6px 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #eee;
+        }
+        a {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Protein Detail: {{ protein_id }}</h1>
+
+    <div class="section">
+        <h2>🧬 Basic Info</h2>
+        <p><strong>EC Number:</strong> {{ protein[0] }}</p>
+        <p><strong>GO Terms:</strong> {{ protein[1] }}</p>
+        <p><strong>Product:</strong> {{ protein[2] }}</p>
+    </div>
+
+    <div class="section">
+        <h2>📊 Confidence Info</h2>
+        <p><strong>E-value:</strong> {{ confidence[0] }}</p>
+        <p><strong>Status:</strong> {{ confidence[1] }}</p>
+        <p><strong>Date:</strong> {{ confidence[2] }}</p>
+    </div>
+
+    {% if functions %}
+    <div class="section">
+        <h2>🔎 Protein Functions</h2>
+        <table>
+            <tr><th>Signature ACC</th><th>Description</th><th>Source</th></tr>
+            {% for f in functions %}
+            <tr><td>{{ f[0] }}</td><td>{{ f[1] }}</td><td>{{ f[2] }}</td></tr>
+            {% endfor %}
+        </table>
+    </div>
+    {% endif %}
+
+    {% if pathways %}
+    <div class="section">
+        <h2>🧭 Functional Pathways</h2>
+        <table>
+            <tr><th>Database</th><th>Pathway ID</th></tr>
+            {% for p in pathways %}
+            <tr><td>{{ p[0] }}</td><td>{{ p[1] }}</td></tr>
+            {% endfor %}
+        </table>
+    </div>
+    {% endif %}
+
+    {% if locations %}
+    <div class="section">
+        <h2>📍 Protein Localization</h2>
+        <table>
+            <tr><th>Start</th><th>End</th><th>Alignment Length</th></tr>
+            {% for l in locations %}
+            <tr><td>{{ l[0] }}</td><td>{{ l[1] }}</td><td>{{ l[2] }}</td></tr>
+            {% endfor %}
+        </table>
+    </div>
+    {% endif %}
+
+    <p><a href="/">⬅️ Back to Search</a></p>
+</body>
+</html>

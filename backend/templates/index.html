@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enzyme Browser</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background-color: #f8f9fa;
+        }
+        h1 {
+            color: #343a40;
+        }
+        .search-box {
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            width: 300px;
+            padding: 8px;
+            font-size: 14px;
+        }
+        input[type="submit"] {
+            padding: 8px 16px;
+            font-size: 14px;
+        }
+        .protein-list {
+            margin-top: 30px;
+        }
+        .protein-list li {
+            margin: 8px 0;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>🧬 Enzyme Browser</h1>
+
+    <p><strong>Total Protein Number:</strong> {{ total_sample_proteins }}</p>
+
+    <form class="search-box" action="/search" method="get">
+        <input type="text" name="query" placeholder="Search GO term, EC number, or product..." />
+        <input type="submit" value="🔍 Search">
+    </form>
+
+    <div class="protein-list">
+        <h2>Sample Proteins</h2>
+        {% if proteins %}
+            <ul>
+            {% for p in proteins %}
+                <li><a href="/protein/{{ p[0] }}">{{ p[0] }}</a> – {{ p[3] }}</li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <p>No proteins found.</p>
+        {% endif %}
+    </div>
+    <h2>Most Common Products</h2>
+<table border="1">
+    <tr>
+        <th>Product</th>
+        <th>Count</th>
+    </tr>
+    {% for product, count in top_products %}
+    <tr>
+        <td>{{ product }}</td>
+        <td>{{ count }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<hr>
+
+</table>
+</body>
+</html>
