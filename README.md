@@ -107,6 +107,16 @@ It is generated locally using the provided schema and initialization scripts.
 
 ---
 
+## Workflow Overview
+
+1. Load a representative subset of metagenomic annotation data (`backend/subset_300.tsv`)
+2. Identify enzyme-related protein IDs (`backend/enzyme_protein_ids_udd.txt`)
+3. Generate the filtered enzyme subset (`backend/filtered_enzymes.tsv`)
+4. Prepare tables for database integration
+5. Query and display results through the Flask backend and template-based pages
+
+---
+
 ## Notes
 
 * This project extends an existing metagenome browser framework rather than being built entirely from scratch
