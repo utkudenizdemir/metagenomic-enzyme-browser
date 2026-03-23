@@ -92,6 +92,12 @@ A small subset of the original metagenomic annotation database is included in th
 
 This subset was used to prototype and validate the enzyme annotation workflow without requiring the full database.
 
+Additional intermediate files generated or used during the workflow:
+
+- `backend/subset_300.tsv` → representative subset of the original dataset used as input  
+- `backend/enzyme_protein_ids_udd.txt` → list of protein IDs used to identify enzyme-related entries  
+- `backend/filtered_enzymes.tsv` → filtered subset containing only enzyme-related proteins  
+
 ---
 
 ## Database
